@@ -45,24 +45,30 @@ docker run -p 3000:3000 -e HOST=  host: 'DESKTOP-JOSQ794'-e USER=root -e PASSWOR
 ## api-endpoints
 Create Course:
 POST /courses
+
 Create a new course; send details, receive a unique course_id for reference
 
 Update Course Details:
 PUT /courses/:course_id
+
 Update course info; use course_id in URL, send modified details, receive updated course info.
 
 Course Registration:
 POST /courses/:course_id/register
+
 Register user for a course; include course_id in URL, user info in request.
 
 Lead Update:
 PUT /leads/:lead_id
+
 Update lead details; use lead_id in URL, send updated lead info, receive confirmation.
 
 Lead Search:
 GET /leads?name=utkrist&email=utkristark27@gmail.com
+
 Search leads by name/email; send criteria, receive list of matching leads.
 
 Add Comment:
 POST /comments
+
 Add comment to system; send content, author details, receive details with a unique identifier.
