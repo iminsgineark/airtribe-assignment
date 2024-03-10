@@ -53,20 +53,31 @@ PUT /courses/:course_id
 
 Update course info; use course_id in URL, send modified details, receive updated course info.
 
+
+
+
 Course Registration:
 POST /courses/:course_id/register
 
 Register user for a course; include course_id in URL, user info in request.
+
+
+
 
 Lead Update:
 PUT /leads/:lead_id
 
 Update lead details; use lead_id in URL, send updated lead info, receive confirmation.
 
+
+
 Lead Search:
 GET /leads?name=utkrist&email=utkristark27@gmail.com
 
 Search leads by name/email; send criteria, receive list of matching leads.
+
+
+
 
 Add Comment:
 POST /comments
