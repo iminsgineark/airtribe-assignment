@@ -5,7 +5,7 @@ const mysql = require('mysql');
 const app = express();
 const port = 3000;
 
-// MySQL Connection
+
 const pool = mysql.createPool({
   host: 'DESKTOP-JOSQ794',
   user: 'root',
@@ -15,7 +15,8 @@ const pool = mysql.createPool({
 
 app.use(bodyParser.json());
 
-// API: Create course
+
+
 app.post('/courses', (req, res) => {
   const { instructor_id, name, max_seats, start_date } = req.body;
 
@@ -25,7 +26,8 @@ app.post('/courses', (req, res) => {
   });
 });
 
-// API: Update course details
+
+
 app.put('/courses/:course_id', (req, res) => {
   const { name, max_seats, start_date } = req.body;
   const course_id = req.params.course_id;
@@ -36,7 +38,9 @@ app.put('/courses/:course_id', (req, res) => {
   });
 });
 
-// API: Course registration
+
+
+
 app.post('/courses/:course_id/register', (req, res) => {
   const { name, email, phone_number, linkedin_profile } = req.body;
   const course_id = req.params.course_id;
@@ -47,7 +51,9 @@ app.post('/courses/:course_id/register', (req, res) => {
   });
 });
 
-// API: Lead update
+
+
+
 app.put('/leads/:lead_id', (req, res) => {
   const { status } = req.body;
   const lead_id = req.params.lead_id;
@@ -58,7 +64,9 @@ app.put('/leads/:lead_id', (req, res) => {
   });
 });
 
-// API: Lead search
+
+
+
 app.get('/leads', (req, res) => {
   const { name, email } = req.query;
 
@@ -68,7 +76,10 @@ app.get('/leads', (req, res) => {
   });
 });
 
-// API: Add comment
+
+
+
+
 app.post('/comments', (req, res) => {
   const { lead_id, instructor_id, comment } = req.body;
 
@@ -78,7 +89,10 @@ app.post('/comments', (req, res) => {
   });
 });
 
-// Start the server
+
+
+
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
