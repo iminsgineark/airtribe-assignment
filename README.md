@@ -43,7 +43,7 @@ npm start
 ## dockerization
 docker build -t airtribe-app .
 
-docker run -p 3000:3000 -e HOST=  host: 'DESKTOP-JOSQ794'-e USER=root -e MYSQL_PASSWORD******** -e DATABASE=Airtribe airtribe-app
+docker run -p 3000:3000 -e HOST=  host: 'DESKTOP-JOSQ794'-e USER=root -e PASSWORD=******** -e DATABASE=Airtribe airtribe-app
 
 ## api-endpoints
 Create Course:
