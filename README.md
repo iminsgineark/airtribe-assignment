@@ -30,24 +30,22 @@ Before you begin, ensure you have met the following requirements:
    cd airtribe-courses
 
 
-#installation
+## installation
 npm install
 
-#database-setup
+## database-setup
 Create a MySQL database and update the pool configuration in app.js with your database credentials.
 Execute the SQL commands in the provided database.sql file to create the necessary tables.
 
-#run-the-application
+## run-the-application
 npm start
 
-#dockerization
+## dockerization
 docker build -t airtribe-app .
 
 docker run -p 3000:3000 -e HOST=  host: 'DESKTOP-JOSQ794'-e USER=root -e MYSQL_PASSWORD******** -e DATABASE=Airtribe airtribe-app
 
-
-
-#api-endpoints
+## api-endpoints
 Create Course:
 POST /courses
 
